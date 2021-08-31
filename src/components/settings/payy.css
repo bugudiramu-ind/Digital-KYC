@@ -1,0 +1,63 @@
+.container {
+    margin: 0 !important;
+    padding: 0 50px !important;
+    max-width: 100% !important;
+}
+
+#payHead h1 {
+    color: #565656;
+    font-size: 55px;
+    font-weight: bold;
+    padding-top: 25px;
+    padding-bottom: 15px;
+}
+
+#payBody {
+    background-color: #EEF8F9;
+    height: 100vh;
+    width: 100%;
+    padding-top: 50px;
+}
+
+#payForm h5 {
+    color: #3a3a3a;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+
+#name {
+    display: block;
+}
+
+
+label {
+    /* display: block; */
+    color: #4d4b4b;
+    font-size: 16px;
+    padding-top: 20px;
+}
+
+.textInput {
+    height: 45px;
+    width: 550px;
+    border: solid 1px #dadada;
+    padding: 0 20px;
+}
+
+#payButton {
+    display: block;
+    height: 45px;
+    width: 550px;
+    background-color: #068D87;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 30px;
+    letter-spacing: 0.1rem !important;
+}

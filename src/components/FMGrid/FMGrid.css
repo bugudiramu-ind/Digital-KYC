@@ -1,0 +1,16 @@
+.top_head {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+.left_side_data {
+    padding-left: 40px;
+}
+.image_data img{
+    width: 20px !important;
+    height: 20px !important;
+    margin-top: 0px !important;
+}
+.main {
+    margin-top: -20px;
+}

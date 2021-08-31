@@ -1,0 +1,143 @@
+@font-face {
+    font-family: ProximaNovaSB;
+    src: url(../../fonts/ProximaNova-Semibold.ttf);
+    }
+
+.wrapper {
+    margin-left: 60px;
+
+   
+}
+
+.wrapper.activexyz {
+    display: flex; 
+    align-items: stretch;
+    /* padding: 30px; */
+    margin-left: 180px !important;
+    overflow-x: hidden !important;
+}
+
+.App {
+   min-height: 100% !important;
+    min-width: 100% !important;
+    background-color: #EEF8F9 !important;
+}
+
+.PPMain {
+    min-height: 100% !important;
+    min-width: 100% !important;
+}
+#PPHead {
+    background-color: white;
+}
+
+
+#PPHead h6 {
+    color: #565656;
+    font-size: 30px;
+    margin-bottom: 0px !important;
+    padding-top: 25px;
+    padding-bottom: 15px;
+    background-color: white;
+}
+#PPBody #outerDiv4 {
+    margin: 30px !important;
+    background-color: white;
+    padding-bottom: 30px !important;
+    min-width: 100%;
+
+}
+#PPForm {
+   margin: 0 ;
+   margin-left: 25px !important;
+} 
+.profile {
+    margin: 40px;
+}
+
+
+.profile_page_link {
+    color: dimgrey !important;
+    padding-left: 14px;
+}
+.profile_page_link:hover  {
+    text-decoration: none;
+}
+.profile h5 {
+    color: #565656;
+    font-size: 18px;
+    font-family: ProximaNovaSB;
+    line-height: 1.2;
+    width: 250px;
+}
+
+.unsetDisplay {
+    display: unset;
+}
+
+.facematchheader {
+    /* margin: 15px 37px; */
+    /* margin-left: 60px; */
+    color: #565656;
+    font-size: 18px;
+    font-family: ProximaNovaSB;
+    line-height: 1.2;
+    width: 250px;
+}
+
+.profile p {
+    color: #565656;
+    font-size: 18px;
+    /* font-family: ProximaNovaSB; */
+    line-height: 1.2;
+    width: 400px;
+    font-family: ProximaNova;
+}
+/* .profile_name {
+    width: 50%;
+}
+.profile_name1 {
+    width: 50%;
+} */
+.GOBack {
+    background-color: #068D87 !important;
+    margin-left: auto;
+    border: #068D87;
+    width: 15%;
+    height: 1%;
+    margin-top: 10px;
+}
+.MuiTabs-indicator {
+    background-color: #068D87 !important;
+}
+.display_data {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 2px 8px #425E5D33;
+    border-radius: 5px;
+    padding: 27px 50px;
+    font-size: 19px;
+    font-family: ProximaNovaSB;
+}
+.profile_adjust_data{
+    width: 410px;
+    font-family: ProximaNova;
+    color: #565656;
+    font-size: 18px;
+}
+.profile_tabs {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 2px 8px #425E5D33;
+    padding: 12px;
+}
+.second_tab {
+    margin: 30px;
+    padding: 20px !important;
+    background-color: white;
+    box-shadow: 2px 5px 20px 0 rgba(14, 16, 16, 0.2);
+}
+.database_verification {
+    margin: 30px;
+    background-color: white;
+    box-shadow: 2px 5px 20px 0 rgba(14, 16, 16, 0.2);
+    padding: 25px;
+}

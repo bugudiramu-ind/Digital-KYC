@@ -1,0 +1,16 @@
+Table {
+    margin-top: 20px;
+}
+
+thead {
+    
+}
+
+th {
+    color: #302f2f;
+    font-size: 12px;
+    font-weight: 400;
+    background-color: #efefef;
+    border : 1px solid #efefef !important;
+    
+}

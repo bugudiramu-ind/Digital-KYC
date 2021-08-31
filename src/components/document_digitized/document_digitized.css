@@ -1,0 +1,352 @@
+@font-face {
+    font-family: ProximaNovaSB;
+    src: url(../../fonts/ProximaNova-Semibold.ttf);
+    }
+
+.wrapper {
+    /* display: flex; */
+    /* align-items: stretch; */
+    margin-left: 60px;
+    /* min-width: 90%; */
+
+    /* min-height: 50% !important; */
+   
+}
+
+.wrapper.activexyz {
+    display: flex;
+    align-items: stretch;
+    /* padding: 30px; */
+    /* margin-left: 180px !important; */
+    overflow-x: hidden !important;
+    
+    /* margin-top: 50px; */ 
+}
+
+.App {
+    /* position: fixed;
+    top: 0;
+  right: 0;
+   left: 0;
+   bottom: 0;  */
+   min-height: 100% !important;
+    min-width: 100% !important;
+    background-color: #EEF8F9 !important;
+}
+
+
+
+
+
+.container {
+    margin: 0 !important;
+    padding: 0 50px !important;
+    max-width: 100% !important;
+}
+.container1 {
+    margin: 0 !important;
+    padding: 0 0 !important;
+    max-width: 100% !important;
+    overflow: hidden;
+}
+
+.digitizedMain {
+    min-height: 100% !important;
+    min-width: 100% !important;
+}
+
+#digitizedHead {
+    background-color: white;
+    /* position: relative; */
+}
+
+.cv_disp {
+    display: none !important;
+}
+
+.cv_button {
+    width: 220px;
+height: 40px;
+background: #EEF8F9;
+border-radius: 4px;
+border:none;
+color :#068D87;
+font-size: 18px;
+/* font-family: ProximaNovaSB; */
+
+}
+
+.fm_button {
+    width: 220px;
+height: 40px;
+background: #EEF8F9;
+border-radius: 4px;
+border:none;
+color :#068D87;
+font-size: 18px;
+margin-left: 20px;
+/* font-family: ProximaNovaSB; */
+}
+
+.vp_button {
+    width: 140px;
+height: 40px;
+background: rgb(1, 19, 18);
+border-radius: 4px;
+border:none;
+color :white;
+font-size: 18px;
+margin-left: 20px;
+}
+
+
+#digitizedHead h6 {
+    color: #565656;
+    font-size: 30px;
+    /* font-weight: bold; */
+    padding-top: 25px;
+    padding-bottom: 15px;
+    background-color: white;
+}
+
+#digitizedBody {
+    background-color: #EEF8F9;
+    height: 87vh;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    /* padding-top: 50px;
+    padding-bottom: 100px !important;
+     */
+}
+
+#digLeft {
+    background-color: white;
+    /* height: 100vh; */
+    /* padding-left: 0 !important; */
+    padding-right: 0 !important;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: inherit !important;
+}
+
+ul {
+    list-style-type:none;
+    padding-inline-start: 0 !important;
+}
+
+.list_left{
+    min-width:100%;
+    /* height: 170px; */
+    background-color: #fff;
+
+  }
+
+  .list_left:hover {
+    background-color: #c5c5c5 !important;
+  }
+
+  .backset {
+    background-color: #c5c5c5 !important;
+  }
+  
+
+  /* #thumbNail:activexyz {
+    background-color: #d4cccb !important;
+  } */
+
+  #dig_imageBox {
+    height: auto;
+    width: 200px;
+    background-color: #f3f3f3;
+    margin: 20px !important;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(97, 96, 96, 0.65);
+    /* -webkit-box-shadow: 3px 3px 5px 6px #ccc; 
+    -moz-box-shadow:    3px 3px 5px 6px #ccc;   */
+    /* box-shadow:         3px 3px 15px 6px #ccc;  */
+    /* border:1px solid black; */
+}
+
+
+
+
+#dig_bottomBoxDiv {
+    height: 40px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    background-color: white;
+    padding: 0px !important;
+    margin: 0px !important;;
+
+}
+
+#dig_bottomBoxDiv h6 {
+    font-size: 14px;
+    margin-top: 13px;
+   margin-left: 12px;
+}
+
+
+#dig_imgPan{
+    margin: 10px;
+    height: 90px;
+    width: 130px;
+} 
+
+
+#outerDiv3 {
+    margin: 40px !important;
+    background-color: white;
+    position: relative;
+    width: 90%;
+    box-shadow: 2px 5px 20px 0 rgba(14, 16, 16, 0.2);
+}
+
+#innerDigLeft {
+    border-right: 1px solid #d4cccb;
+    /* height: 500px; */
+    padding-bottom: 50px;
+    padding-right: 0 !important;
+    padding-left: 20px !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+   
+}
+
+#imageClassify {
+    max-width: 550px;
+    width: 82%;
+    height: auto;
+    margin: 30px;
+  
+   
+}
+
+#innerDigRight {
+    padding-right: 0 !important;
+    padding-left: 0 !important; 
+    padding-bottom: 50px;
+}
+
+#label1, #label2, #label3, #label4, #label5, #label6  {
+    display: block;
+}
+
+
+#rightContent {
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.textInput1 {
+    height: 45px;
+    /* width: 80%; */
+    border: solid 1px #dadada;
+    padding: 0 20px;
+}
+
+#dig_bottomDiv {
+    background-color: #BFF2F1;
+    width: 97.6%;
+    height: 80px;
+    margin-left: 15px;
+    bottom: 0px;
+    /* padding-left: 70px !important; */
+    
+}
+
+#dig_bottomButton {
+    display: block;
+    height: 45px;
+    width: 100px;
+    background-color: #068D87;
+    border: solid 1px #e2e2e2;
+    border-radius: 4px;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    margin: 5px;
+    transition: 0.2s;
+    position: absolute;
+    right: 20px !important;
+    bottom: 13px !important;
+   
+    /* position: absolute !important;
+    bottom: 4px !important;
+    right: 10px !important; */
+  
+}
+
+#dig_bottomButton:hover {
+    background-color: #042D2C;
+    border-color: white;
+    color: white;
+    font-weight: bold;
+    
+}
+
+#dig_colorDiv {
+    height: 8px;
+background-color: green;
+border-bottom-left-radius: 6px;
+border-bottom-right-radius: 6px;
+padding: 0px !important;
+margin: 0px !important;
+}
+
+#dig_colorDiv1 {
+    height: 8px;
+background-color: red;
+border-bottom-left-radius: 6px;
+border-bottom-right-radius: 6px;
+padding: 0px !important;
+margin: 0px !important;
+
+}
+
+
+.Ex_button {
+    width: 110px;
+height: 40px;
+background: #068D87;
+border-radius: 4px;
+border:none;
+color :white;
+font-size: 18px;
+margin-left: 20px;
+
+}
+
+.Up_button {
+    width: 200px;
+height: 40px;
+background: #068D87;
+border-radius: 4px;
+border:none;
+color :white;
+font-size: 18px;
+margin-left: 20px;
+}
+
+#exp_but_div {
+    /* align-self: auto; */
+    position: absolute;
+    right: 100px;
+    top: 25px;
+}
+
+#revHead {
+    /* display: flex; */
+    position: relative;
+}
+
+
+.wid {
+    width: 90% !important;
+}
+
+Table {
+    margin: 20px;
+}

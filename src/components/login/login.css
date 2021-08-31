@@ -1,0 +1,137 @@
+.container {
+    margin: 0 !important;
+    padding: 0 50px !important;
+    max-width: 100% !important;
+}
+
+.externalimage {
+    margin-top: 10px !important;
+    height: 70px;
+}
+ 
+#loginHead h1 {
+    color: #565656;
+    font-size: 55px;
+    font-weight: bold;
+    padding-top: 25px;
+    padding-bottom: 15px;
+}
+
+#loginBody {
+    background-color: #EEF8F9;
+    height: 100vh;
+    width: 100%;
+    padding-top: 50px;
+    /* margin-bottom: 30px !important; */
+}
+
+#loginForm h5 {
+    color: #3a3a3a;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+#name {
+    display: block;
+}
+
+#pass {
+    display: block;
+    padding-left: 16px;
+}
+
+#pass a {
+    /* float: right; */
+    margin-left: 350px;
+}
+
+label {
+    /* display: block; */
+    color: #4d4b4b;
+    font-size: 16px;
+    padding-top: 20px;
+}
+
+.textInput {
+    height: 45px;
+    width: 550px;
+    border: solid 1px #dadada;
+    padding: 0 20px;
+}
+
+.field-icon {
+    margin-left: -40px;
+    cursor: pointer;
+}
+
+.fa-eye {
+    color : #c1c7d0;
+}
+
+#signInButton {
+    display: block;
+    height: 45px;
+    width: 550px;
+    background-color: #068D87;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 30px;
+    
+}
+
+#checkBox {
+    margin-top: 25px;
+}
+
+input[type="checkbox"] {
+    height: 20px;
+    width: 20px;
+    background-color: white !important;
+}
+
+#newFull {
+    margin-top: 30px;
+}
+
+#new {
+    color: #7d7d7d;
+    text-align: center;
+    
+    position: relative;
+    margin: 0px !important;
+    padding: 5px 0px !important;
+}
+
+hr {
+    width: 210px;
+    /* position: relative; */
+    background-color: #d1d1d1;
+}
+
+#createButton {
+    display: block;
+    height: 45px;
+    width: 550px;
+    background-color: white;
+    border: solid 1px #e2e2e2;
+    border-radius: 4px;
+    color: #068D87;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 30px;
+    transition: 0.2s;
+    font-weight: bold;
+}
+
+#createButton:hover {
+    background-color: #068D87;
+    color: white;
+    font-weight: bold;
+}
+

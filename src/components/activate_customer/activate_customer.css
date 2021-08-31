@@ -1,0 +1,46 @@
+.container {
+    margin: 0 !important;
+    padding: 0 50px !important;
+    max-width: 100% !important;
+}
+
+.mainLogo {
+    /* background-image: url(../../images/IN-D-FS-LogoSignuppage.png); */
+    background-repeat: no-repeat;
+    height: 70px;
+    width: 250px;
+    margin: 20px 0px;
+}
+
+#activationHead h1 {
+    color: #565656;
+    font-size: 55px;
+    font-weight: bold;
+    padding-top: 25px;
+    padding-bottom: 15px;
+}
+
+#activationBody {
+    background-color: #f3f3f3;
+    height: 100vh;
+    width: 100%;
+    padding-top: 50px;
+}
+
+
+#messageBody {
+    background-color: white;
+    color: black;
+    width: 500px;
+    height: 200px;
+    margin: 100px;
+}
+
+#messageBody h4 {
+    color: black;
+    font-size: 24px;
+    margin: 20px;
+    text-align: center;
+}
+
+
