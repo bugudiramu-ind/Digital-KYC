@@ -1,3 +1,8 @@
+# Digital KYC Flow Diagram (Front End Flow)
+
+![Digital KYC Flow](https://drive.google.com/uc?export=view&id=1XE5YGUva3xecCbRTGsUFVgcIbTVfYIBU "Digital KYC").
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
