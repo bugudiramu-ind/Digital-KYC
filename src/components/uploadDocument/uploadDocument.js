@@ -1,23 +1,22 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
-import "./uploadDocument.css";
-import axios from "axios";
+import './uploadDocument.css';
+import axios from 'axios';
 
-import { FilePond } from "react-filepond";
-import "filepond/dist/filepond.min.css";
-// import JSONData from '../../json/data.json';
+import { FilePond } from 'react-filepond';
+import 'filepond/dist/filepond.min.css';
 
-import { Redirect, Link } from "react-router-dom";
+import { Redirect, Link } from 'react-router-dom';
 
-import LoadingOverlay from "react-loading-overlay";
+import LoadingOverlay from 'react-loading-overlay';
 
-import $ from "jquery";
-import "../Sidenav/Sidenav.css";
-import SideMenu from "../Sidenav/Sidenav";
-import Tooltip from "@material-ui/core/Tooltip";
-import Modal from "react-bootstrap/Modal";
-import { Button, Navbar } from "react-bootstrap";
-import { KYC_SIT,PATH } from "../../constants";
+import $ from 'jquery';
+import '../Sidenav/Sidenav.css';
+import SideMenu from '../Sidenav/Sidenav';
+import Tooltip from '@material-ui/core/Tooltip';
+import Modal from 'react-bootstrap/Modal';
+import { Button, Navbar } from 'react-bootstrap';
+import { KYC_SIT, PATH } from '../../constants';
 
 class UploadDocument extends Component {
   constructor(props) {
@@ -27,13 +26,13 @@ class UploadDocument extends Component {
       // Set initial files, type 'local' means this is a file
       // that has already been uploaded to the server (see docs)
       files: [],
-      folder_name: "",
-      ui_response: "",
+      folder_name: '',
+      ui_response: '',
       redirect: false,
       redirect_after_10000: false,
       isActive: false,
       showModal: false,
-      accessToken: "",
+      accessToken: '',
     };
 
     // this.upload = this.upload.bind(this);
@@ -58,27 +57,27 @@ class UploadDocument extends Component {
 
   logout() {
     localStorage.clear();
-    window.location.href = "/Login";
+    window.location.href = '/Login';
   }
 
   handleInit() {
-    console.log("FilePond instance has initialised", this.pond);
+    console.log('FilePond instance has initialised', this.pond);
   }
 
   componentDidMount() {
-    localStorage.removeItem("itemsArray");
-    $("#sidebar").toggleClass("activexyz");
+    localStorage.removeItem('itemsArray');
+    $('#sidebar').toggleClass('activexyz');
 
-    $("#collapseIcon").on("click", function () {
-      $("#sidebar").toggleClass("activexyz");
-      $(".wrapper").toggleClass("activexyz");
+    $('#collapseIcon').on('click', function () {
+      $('#sidebar').toggleClass('activexyz');
+      $('.wrapper').toggleClass('activexyz');
     });
 
-    if (localStorage.getItem("user_type") === "User") {
-      console.log("yess");
-      $("#set").toggleClass("noDisp");
+    if (localStorage.getItem('user_type') === 'User') {
+      console.log('yess');
+      $('#set').toggleClass('noDisp');
     }
-    const value = localStorage.getItem("access");
+    const value = localStorage.getItem('access');
     this.setState({
       accessToken: value,
     });
@@ -92,21 +91,21 @@ class UploadDocument extends Component {
       .getFiles()
       .map((fileItem) => fileItem.file)
       .forEach((file) => {
-        formData.append("files", file, file.name);
+        formData.append('files', file, file.name);
       });
     console.log(this.pond.getFiles());
 
     for (var key of formData.entries()) {
-      console.log(key[0] + ", " + key[1]);
+      console.log(key[0] + ', ' + key[1]);
     }
     const token = this.state.accessToken;
     axios(`${KYC_SIT}${PATH.uid}`, {
       // axios("https://vkyc.in-d.ai/api/upload/uid", {
-      method: "get",
+      method: 'get',
       // data: data,
       headers: {
         Authorization: `Bearer ${token}`,
-        "Content-Type": "multipart/form-data",
+        'Content-Type': 'multipart/form-data',
       },
     })
       .then((res) => {
@@ -121,7 +120,7 @@ class UploadDocument extends Component {
           //     "foldername": this.state.folder_name
           // };
           const uidToken = res.data.result.uid;
-          localStorage.setItem("uidtoken", uidToken);
+          localStorage.setItem('uidtoken', uidToken);
           const files = this.state.files;
           console.log(files[0].name);
           var formData = new FormData();
@@ -130,26 +129,26 @@ class UploadDocument extends Component {
             .getFiles()
             .map((fileItem) => fileItem.file)
             .forEach((file) => {
-              formData.append("images", file, file.name);
-              console.log("images", file.name);
+              formData.append('images', file, file.name);
+              console.log('images', file.name);
 
-              let idCardBase64 = "";
+              let idCardBase64 = '';
               this.getBase64(file, (result) => {
                 idCardBase64 = result;
-                console.log("idCardBase64", idCardBase64);
+                console.log('idCardBase64', idCardBase64);
 
-                if (localStorage.getItem("itemsArray") === null) {
+                if (localStorage.getItem('itemsArray') === null) {
                   var oldItems = [];
-                  console.log("oldItems", JSON.stringify(oldItems));
+                  console.log('oldItems', JSON.stringify(oldItems));
                   var newItem = { [file.name]: idCardBase64 };
                   oldItems.push(newItem);
-                  localStorage.setItem("itemsArray", JSON.stringify(oldItems));
+                  localStorage.setItem('itemsArray', JSON.stringify(oldItems));
                 } else {
-                  var oldItems = JSON.parse(localStorage.getItem("itemsArray"));
-                  console.log("oldItems", JSON.stringify(oldItems));
+                  var oldItems = JSON.parse(localStorage.getItem('itemsArray'));
+                  console.log('oldItems', JSON.stringify(oldItems));
                   var newItem = { [file.name]: idCardBase64 };
                   oldItems.push(newItem);
-                  localStorage.setItem("itemsArray", JSON.stringify(oldItems));
+                  localStorage.setItem('itemsArray', JSON.stringify(oldItems));
                 }
               });
 
@@ -158,12 +157,12 @@ class UploadDocument extends Component {
           //   formData.append("images",this.state.files)
           console.log(formData);
           axios(`${KYC_SIT}${PATH.classification}${uidToken}`, {
-          // axios(`https://vkyc.in-d.ai/api/class/${uidToken}`, {
-            method: "POST",
+            // axios(`https://vkyc.in-d.ai/api/class/${uidToken}`, {
+            method: 'POST',
             data: formData,
             headers: {
               Authorization: `Bearer ${token}`,
-              "Content-Type": "multipart/form-data",
+              'Content-Type': 'multipart/form-data',
             },
           })
             .then((res) => {
@@ -183,10 +182,10 @@ class UploadDocument extends Component {
         }
       })
       .catch((error) => {
-        if ("res" in error && "message" in error.res) {
+        if ('res' in error && 'message' in error.res) {
           alert(error.res.message);
         } else {
-          alert("error");
+          alert('error');
         }
       });
   };
@@ -198,7 +197,7 @@ class UploadDocument extends Component {
       cb(reader.result);
     };
     reader.onerror = function (error) {
-      console.log("Error: ", error);
+      console.log('Error: ', error);
     };
   }
 
@@ -209,7 +208,7 @@ class UploadDocument extends Component {
       return (
         <Redirect
           to={{
-            pathname: "/UploadDocPrev",
+            pathname: '/UploadDocPrev',
             state: {
               ui_response: this.state.ui_response,
               folder_name: this.state.folder_name,
@@ -223,7 +222,7 @@ class UploadDocument extends Component {
       return (
         <Redirect
           to={{
-            pathname: "/Login",
+            pathname: '/Login',
             // state :{ui_response: this.state.ui_response, folder_name: this.state.folder_name}
           }}
         />
@@ -231,31 +230,31 @@ class UploadDocument extends Component {
     }
 
     return (
-      <div className="App">
+      <div className='App'>
         <SideMenu />
-        <div className="wrapper">
-          <div className="uploadDocumentMain">
-            <Navbar id="uploadDocumentHead" className="container" sticky="top">
+        <div className='wrapper'>
+          <div className='uploadDocumentMain'>
+            <Navbar id='uploadDocumentHead' className='container' sticky='top'>
               <h1>Upload Documents</h1>
             </Navbar>
             <LoadingOverlay
               active={this.state.isActive}
               spinner
-              text="Uploading and Classifying..."
+              text='Uploading and Classifying...'
             >
               <div
-                id="uploadDocumentBody"
-                className="container row justify-content-center"
+                id='uploadDocumentBody'
+                className='container row justify-content-center'
               >
-                <div id="outerDiv2" className="row justify-content-center">
-                  <div id="outerDiv1">
-                    <form onSubmit={this.upload} encType="multipart/form-data">
-                      <div className="row justify-content-center">
-                        <div id="borderBox1">
+                <div id='outerDiv2' className='row justify-content-center'>
+                  <div id='outerDiv1'>
+                    <form onSubmit={this.upload} encType='multipart/form-data'>
+                      <div className='row justify-content-center'>
+                        <div id='borderBox1'>
                           <FilePond
-                            maxTotalFileSize="9500KB"
+                            maxTotalFileSize='9500KB'
                             labelMaxTotalFileSizeExceeded={
-                              "Maximum total size exceeded"
+                              'Maximum total size exceeded'
                             }
                             allowMultiple={true}
                             ref={(ref) => (this.pond = ref)}
@@ -269,27 +268,27 @@ class UploadDocument extends Component {
                                 ),
                               });
                             }}
-                            name="file"
-                            id="file"
+                            name='file'
+                            id='file'
                             labelIdle='<b>Drag your documents here or <span class="filepond--label-action">Browse</span></b>'
                           />
                         </div>
                       </div>
                     </form>
 
-                    <div style={{ marginTop: "5vh" }}>
+                    <div style={{ marginTop: '5vh' }}>
                       <hr
                         style={{
-                          backgroundColor: "#d1d1d1",
-                          width: "95%",
-                          marginLeft: "30px !important",
-                          marginBottom: "0px !important",
+                          backgroundColor: '#d1d1d1',
+                          width: '95%',
+                          marginLeft: '30px !important',
+                          marginBottom: '0px !important',
                         }}
                       />
 
-                      <div id="rightAlignButtonDiv">
-                        <div className="row">
-                          <button id="bottomButton" onClick={this.classify}>
+                      <div id='rightAlignButtonDiv'>
+                        <div className='row'>
+                          <button id='bottomButton' onClick={this.classify}>
                             Classify
                           </button>
                         </div>
